@@ -21,12 +21,14 @@ function App() {
 
   useEffect(() => {
     // window.initMap = initMap
+    console.log(window.google)
     const uluru = { lat: -25.344, lng: 131.031 }
-    new window.google.maps.Map(ref.current, {
+    console.log(ref.current)
+    new window.google.maps.Map(document.getElementById("map"), {
       center: uluru,
       zoom: 4
     })
-  })
+  }, [])
   return (
     <Wrapper apiKey={'AIzaSyAnzlq9yYSHWTqiw3BHC_utiL60Adf5MCI'}>
     <div className="App">
