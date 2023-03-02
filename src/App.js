@@ -1,24 +1,24 @@
 import './App.css';
-import {google} from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAnzlq9yYSHWTqiw3BHC_utiL60Adf5MCI&callback=initMap'
+// import {google} from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAnzlq9yYSHWTqiw3BHC_utiL60Adf5MCI&callback=initMap'
 import { useEffect } from 'react';
 
 function App() {
 
-  const initMap = () => {
-    const uluru = { lat: -25.344, lng: 131.031 }
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
-      center: uluru
-    })
-    new google.maps.Marker({
-      position: uluru,
-      map: map
-    })
-  }
+  // const initMap = () => {
+  //   const uluru = { lat: -25.344, lng: 131.031 }
+  //   const map = new google.maps.Map(document.getElementById("map"), {
+  //     zoom: 4,
+  //     center: uluru
+  //   })
+  //   new google.maps.Marker({
+  //     position: uluru,
+  //     map: map
+  //   })
+  // }
 
-  useEffect(() => {
-    window.initMap = initMap
-  })
+  // useEffect(() => {
+  //   window.initMap = initMap
+  // })
   return (
     <div className="App">
       <div id='map'></div>
