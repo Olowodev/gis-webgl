@@ -1,6 +1,6 @@
 import './App.css';
 // import {google} from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAnzlq9yYSHWTqiw3BHC_utiL60Adf5MCI&callback=initMap'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function App() {
 
