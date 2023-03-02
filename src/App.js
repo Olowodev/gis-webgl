@@ -1,8 +1,11 @@
 import './App.css';
 // import {google} from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAnzlq9yYSHWTqiw3BHC_utiL60Adf5MCI&callback=initMap'
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
+import { Wrapper } from '@googlemaps/react-wrapper';
+import { useRef } from 'react';
 
 function App() {
+  const ref = useRef()
 
   // const initMap = () => {
   //   const uluru = { lat: -25.344, lng: 131.031 }
@@ -16,12 +19,18 @@ function App() {
   //   })
   // }
 
-  // useEffect(() => {
-  //   window.initMap = initMap
-  // })
+  useEffect(() => {
+    // window.initMap = initMap
+    const uluru = { lat: -25.344, lng: 131.031 }
+    new window.google.maps.Map(ref.current, {
+      center: uluru,
+      zoom: 4
+    })
+  })
   return (
+    <Wrapper apiKey={'AIzaSyAnzlq9yYSHWTqiw3BHC_utiL60Adf5MCI'}>
     <div className="App">
-      <div id='map'></div>
+      <div ref={ref} id='map'></div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -37,6 +46,7 @@ function App() {
         </a>
       </header> */}
     </div>
+    </Wrapper>
   );
 }
 
