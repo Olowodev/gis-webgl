@@ -105,7 +105,7 @@ function WrapperComponent () {
       return marker
     })
 
-    new MarkerClusterer({ markers, map })
+    // new MarkerClusterer({ markers, map })
   })
   return (
     <div ref={ref} id="map"></div>
